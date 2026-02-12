@@ -1,0 +1,561 @@
+{
+  "stays": [
+    {
+      "id": "stay-001",
+      "name": "Luxury Penthouse with Stunning City Views",
+      "description": "Experience the ultimate urban luxury in this stunning penthouse apartment. Floor-to-ceiling windows offer breathtaking panoramic views of the city skyline. The open-concept living space features designer furniture, a gourmet kitchen with top-of-the-line appliances, and a private terrace perfect for entertaining. Located in the heart of Manhattan, you'll be steps away from world-class dining, shopping, and entertainment.",
+      "location": {
+        "city": "New York",
+        "country": "USA",
+        "address": "432 Park Avenue, Manhattan",
+        "coordinates": { "lat": 40.7614, "lng": -73.9718 }
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&h=600&fit=crop"
+      ],
+      "pricePerNight": 850,
+      "rating": 4.95,
+      "reviewCount": 128,
+      "amenities": ["wifi", "ac", "kitchen", "tv", "workspace", "gym", "parking"],
+      "host": {
+        "name": "Michael Chen",
+        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop",
+        "joinedDate": "2019-03-15",
+        "responseRate": 99,
+        "isSuperhost": true
+      },
+      "maxGuests": 4,
+      "bedrooms": 2,
+      "beds": 2,
+      "bathrooms": 2,
+      "availability": [
+        { "start": "2026-02-15", "end": "2026-06-30" },
+        { "start": "2026-08-01", "end": "2026-12-31" }
+      ],
+      "propertyType": "penthouse",
+      "featured": true
+    },
+    {
+      "id": "stay-002",
+      "name": "Charming Parisian Apartment near Eiffel Tower",
+      "description": "Step into Parisian elegance in this beautifully renovated apartment in the 7th arrondissement. Classic Haussmann architecture meets modern comfort with original hardwood floors, ornate moldings, and a marble fireplace. Wake up to views of the Eiffel Tower from your bedroom window. The fully equipped kitchen and cozy living area make this the perfect base for exploring the City of Light.",
+      "location": {
+        "city": "Paris",
+        "country": "France",
+        "address": "15 Rue de l'Université, 7th Arr.",
+        "coordinates": { "lat": 48.8584, "lng": 2.2945 }
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1549638441-b787d2e11f14?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop"
+      ],
+      "pricePerNight": 320,
+      "rating": 4.88,
+      "reviewCount": 256,
+      "amenities": ["wifi", "heating", "kitchen", "tv", "washer"],
+      "host": {
+        "name": "Sophie Laurent",
+        "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop",
+        "joinedDate": "2018-06-20",
+        "responseRate": 98,
+        "isSuperhost": true
+      },
+      "maxGuests": 3,
+      "bedrooms": 1,
+      "beds": 1,
+      "bathrooms": 1,
+      "availability": [
+        { "start": "2026-02-20", "end": "2026-12-31" }
+      ],
+      "propertyType": "apartment",
+      "featured": true
+    },
+    {
+      "id": "stay-003",
+      "name": "Modern Tokyo Loft in Shibuya",
+      "description": "Immerse yourself in Tokyo's vibrant culture from this sleek, modern loft in the heart of Shibuya. The minimalist Japanese design creates a zen-like atmosphere with tatami accents and shoji screens. Floor-to-ceiling windows showcase the neon-lit cityscape. Walking distance to Shibuya Crossing, trendy boutiques, and incredible restaurants. Perfect for solo travelers or couples seeking an authentic Tokyo experience.",
+      "location": {
+        "city": "Tokyo",
+        "country": "Japan",
+        "address": "2-21-1 Shibuya, Shibuya-ku",
+        "coordinates": { "lat": 35.6595, "lng": 139.7004 }
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1502672023488-70e25813eb80?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1536376072261-38c75010e6c9?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800&h=600&fit=crop"
+      ],
+      "pricePerNight": 180,
+      "rating": 4.92,
+      "reviewCount": 189,
+      "amenities": ["wifi", "ac", "kitchen", "tv", "washer", "workspace"],
+      "host": {
+        "name": "Yuki Tanaka",
+        "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop",
+        "joinedDate": "2020-01-10",
+        "responseRate": 100,
+        "isSuperhost": true
+      },
+      "maxGuests": 2,
+      "bedrooms": 1,
+      "beds": 1,
+      "bathrooms": 1,
+      "availability": [
+        { "start": "2026-03-01", "end": "2026-12-31" }
+      ],
+      "propertyType": "loft",
+      "featured": true
+    },
+    {
+      "id": "stay-004",
+      "name": "Beachfront Villa with Private Pool",
+      "description": "Escape to paradise in this stunning beachfront villa on the pristine shores of Bali. Wake up to the sound of waves and step directly onto white sand beaches. The villa features an infinity pool overlooking the ocean, open-air living spaces, and lush tropical gardens. Traditional Balinese architecture blends seamlessly with modern luxury amenities. Perfect for families or groups seeking a tropical retreat.",
+      "location": {
+        "city": "Bali",
+        "country": "Indonesia",
+        "address": "Jl. Pantai Berawa No. 88, Canggu",
+        "coordinates": { "lat": -8.6478, "lng": 115.1385 }
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=600&fit=crop"
+      ],
+      "pricePerNight": 450,
+      "rating": 4.97,
+      "reviewCount": 87,
+      "amenities": ["wifi", "pool", "ac", "kitchen", "parking", "beachfront", "breakfast"],
+      "host": {
+        "name": "Made Wijaya",
+        "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
+        "joinedDate": "2017-08-05",
+        "responseRate": 97,
+        "isSuperhost": true
+      },
+      "maxGuests": 8,
+      "bedrooms": 4,
+      "beds": 4,
+      "bathrooms": 4,
+      "availability": [
+        { "start": "2026-02-15", "end": "2026-12-31" }
+      ],
+      "propertyType": "villa",
+      "featured": true
+    },
+    {
+      "id": "stay-005",
+      "name": "Cozy Mountain Cabin with Hot Tub",
+      "description": "Retreat to the mountains in this charming A-frame cabin surrounded by towering pines. The rustic-chic interior features exposed beams, a stone fireplace, and floor-to-ceiling windows framing mountain views. Relax in the private hot tub under the stars or cozy up by the fire. Minutes from world-class skiing in winter and hiking trails in summer. The perfect escape for nature lovers.",
+      "location": {
+        "city": "Aspen",
+        "country": "USA",
+        "address": "1250 Mountain View Road",
+        "coordinates": { "lat": 39.1911, "lng": -106.8175 }
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1518732714860-b62714ce0c59?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1587061949409-02df41d5e562?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=800&h=600&fit=crop"
+      ],
+      "pricePerNight": 395,
+      "rating": 4.94,
+      "reviewCount": 156,
+      "amenities": ["wifi", "heating", "kitchen", "fireplace", "hottub", "parking", "mountainview"],
+      "host": {
+        "name": "Jake Morrison",
+        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop",
+        "joinedDate": "2019-11-22",
+        "responseRate": 95,
+        "isSuperhost": true
+      },
+      "maxGuests": 6,
+      "bedrooms": 2,
+      "beds": 3,
+      "bathrooms": 2,
+      "availability": [
+        { "start": "2026-02-15", "end": "2026-04-30" },
+        { "start": "2026-06-01", "end": "2026-12-31" }
+      ],
+      "propertyType": "cabin",
+      "featured": true
+    },
+    {
+      "id": "stay-006",
+      "name": "Historic London Townhouse in Notting Hill",
+      "description": "Live like a local in this beautifully restored Victorian townhouse in the heart of Notting Hill. Original period features including ornate fireplaces and sash windows complement contemporary furnishings. The private garden is perfect for morning coffee. Steps from Portobello Road Market, charming cafes, and the iconic colorful houses. An ideal base for exploring London's most beloved neighborhood.",
+      "location": {
+        "city": "London",
+        "country": "UK",
+        "address": "42 Westbourne Grove, Notting Hill",
+        "coordinates": { "lat": 51.5154, "lng": -0.1969 }
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=600&fit=crop"
+      ],
+      "pricePerNight": 275,
+      "rating": 4.89,
+      "reviewCount": 203,
+      "amenities": ["wifi", "heating", "kitchen", "tv", "washer", "dryer", "workspace"],
+      "host": {
+        "name": "Emma Thompson",
+        "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop",
+        "joinedDate": "2018-02-14",
+        "responseRate": 99,
+        "isSuperhost": true
+      },
+      "maxGuests": 5,
+      "bedrooms": 3,
+      "beds": 3,
+      "bathrooms": 2,
+      "availability": [
+        { "start": "2026-02-20", "end": "2026-12-31" }
+      ],
+      "propertyType": "house",
+      "featured": false
+    },
+    {
+      "id": "stay-007",
+      "name": "Santorini Cave House with Caldera Views",
+      "description": "Experience the magic of Santorini in this traditional cave house carved into the cliffs of Oia. Whitewashed walls and blue accents create the iconic Greek island aesthetic. Watch spectacular sunsets from your private terrace overlooking the caldera. The plunge pool offers refreshing dips with unparalleled views. Walking distance to Oia's famous windmills, boutiques, and restaurants.",
+      "location": {
+        "city": "Santorini",
+        "country": "Greece",
+        "address": "Oia Village, Caldera Cliff",
+        "coordinates": { "lat": 36.4618, "lng": 25.3753 }
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1601581875039-e899893d520c?w=800&h=600&fit=crop"
+      ],
+      "pricePerNight": 520,
+      "rating": 4.96,
+      "reviewCount": 142,
+      "amenities": ["wifi", "ac", "pool", "kitchen", "tv", "breakfast"],
+      "host": {
+        "name": "Nikos Papadopoulos",
+        "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop",
+        "joinedDate": "2016-05-18",
+        "responseRate": 98,
+        "isSuperhost": true
+      },
+      "maxGuests": 4,
+      "bedrooms": 2,
+      "beds": 2,
+      "bathrooms": 2,
+      "availability": [
+        { "start": "2026-04-01", "end": "2026-10-31" }
+      ],
+      "propertyType": "villa",
+      "featured": false
+    },
+    {
+      "id": "stay-008",
+      "name": "Downtown Dubai Apartment with Burj Khalifa View",
+      "description": "Live the Dubai dream in this luxurious apartment with direct views of the Burj Khalifa. Watch the famous fountain show from your living room or private balcony. The modern interior features premium finishes, smart home technology, and designer furniture. Located in Downtown Dubai with direct access to Dubai Mall. Building amenities include infinity pool, gym, and concierge service.",
+      "location": {
+        "city": "Dubai",
+        "country": "UAE",
+        "address": "Boulevard Point, Downtown Dubai",
+        "coordinates": { "lat": 25.1972, "lng": 55.2744 }
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=800&h=600&fit=crop"
+      ],
+      "pricePerNight": 380,
+      "rating": 4.91,
+      "reviewCount": 178,
+      "amenities": ["wifi", "ac", "pool", "gym", "kitchen", "tv", "parking", "workspace"],
+      "host": {
+        "name": "Ahmed Al-Rashid",
+        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop",
+        "joinedDate": "2020-03-08",
+        "responseRate": 96,
+        "isSuperhost": false
+      },
+      "maxGuests": 4,
+      "bedrooms": 2,
+      "beds": 2,
+      "bathrooms": 2,
+      "availability": [
+        { "start": "2026-02-15", "end": "2026-12-31" }
+      ],
+      "propertyType": "apartment",
+      "featured": false
+    },
+    {
+      "id": "stay-009",
+      "name": "Barcelona Gothic Quarter Studio",
+      "description": "Discover Barcelona from this stylish studio in the historic Gothic Quarter. Exposed brick walls and original wooden beams blend with modern amenities. Step outside to medieval streets, tapas bars, and the famous La Rambla. The rooftop terrace offers city views and a perfect spot for evening drinks. Ideal for couples or solo travelers wanting to experience authentic Barcelona.",
+      "location": {
+        "city": "Barcelona",
+        "country": "Spain",
+        "address": "Carrer dels Banys Nous, Gothic Quarter",
+        "coordinates": { "lat": 41.3825, "lng": 2.1769 }
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop"
+      ],
+      "pricePerNight": 145,
+      "rating": 4.85,
+      "reviewCount": 234,
+      "amenities": ["wifi", "ac", "kitchen", "tv", "washer"],
+      "host": {
+        "name": "Carlos Martinez",
+        "avatar": "https://images.unsplash.com/photo-1463453091185-61582044d556?w=150&h=150&fit=crop",
+        "joinedDate": "2019-07-12",
+        "responseRate": 94,
+        "isSuperhost": false
+      },
+      "maxGuests": 2,
+      "bedrooms": 0,
+      "beds": 1,
+      "bathrooms": 1,
+      "availability": [
+        { "start": "2026-02-15", "end": "2026-12-31" }
+      ],
+      "propertyType": "studio",
+      "featured": false
+    },
+    {
+      "id": "stay-010",
+      "name": "Malibu Beach House with Ocean Access",
+      "description": "Wake up to the sound of waves in this stunning Malibu beach house with direct ocean access. The open-plan living area features walls of glass that blur the line between indoor and outdoor living. A spacious deck with outdoor dining and lounge areas is perfect for sunset watching. Surfboards and beach gear provided. Experience the quintessential California coastal lifestyle.",
+      "location": {
+        "city": "Malibu",
+        "country": "USA",
+        "address": "21500 Pacific Coast Highway",
+        "coordinates": { "lat": 34.0259, "lng": -118.7798 }
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop"
+      ],
+      "pricePerNight": 750,
+      "rating": 4.93,
+      "reviewCount": 98,
+      "amenities": ["wifi", "ac", "kitchen", "tv", "parking", "beachfront", "fireplace"],
+      "host": {
+        "name": "Jennifer Hayes",
+        "avatar": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150&h=150&fit=crop",
+        "joinedDate": "2018-09-30",
+        "responseRate": 97,
+        "isSuperhost": true
+      },
+      "maxGuests": 6,
+      "bedrooms": 3,
+      "beds": 3,
+      "bathrooms": 3,
+      "availability": [
+        { "start": "2026-03-01", "end": "2026-12-31" }
+      ],
+      "propertyType": "house",
+      "featured": false
+    },
+    {
+      "id": "stay-011",
+      "name": "Amsterdam Canal House",
+      "description": "Experience Amsterdam's Golden Age in this beautifully preserved 17th-century canal house. Original features including steep Dutch staircases, exposed beams, and large windows overlooking the Prinsengracht canal. Modern updates ensure comfort while maintaining historic charm. Located in the Jordaan neighborhood, surrounded by galleries, boutiques, and cozy brown cafes.",
+      "location": {
+        "city": "Amsterdam",
+        "country": "Netherlands",
+        "address": "Prinsengracht 456",
+        "coordinates": { "lat": 52.3676, "lng": 4.8836 }
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=800&h=600&fit=crop"
+      ],
+      "pricePerNight": 295,
+      "rating": 4.87,
+      "reviewCount": 167,
+      "amenities": ["wifi", "heating", "kitchen", "tv", "washer", "workspace"],
+      "host": {
+        "name": "Willem de Vries",
+        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop",
+        "joinedDate": "2017-04-22",
+        "responseRate": 98,
+        "isSuperhost": true
+      },
+      "maxGuests": 4,
+      "bedrooms": 2,
+      "beds": 2,
+      "bathrooms": 1,
+      "availability": [
+        { "start": "2026-02-20", "end": "2026-12-31" }
+      ],
+      "propertyType": "house",
+      "featured": false
+    },
+    {
+      "id": "stay-012",
+      "name": "Sydney Harbour View Apartment",
+      "description": "Enjoy iconic views of Sydney Harbour Bridge and Opera House from this contemporary apartment in The Rocks. Floor-to-ceiling windows showcase the stunning harbor panorama. The modern interior features clean lines and premium finishes. Walk to Circular Quay, the Opera House, and Sydney's best restaurants. Building amenities include rooftop pool and fitness center.",
+      "location": {
+        "city": "Sydney",
+        "country": "Australia",
+        "address": "88 George Street, The Rocks",
+        "coordinates": { "lat": -33.8568, "lng": 151.2093 }
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=800&h=600&fit=crop"
+      ],
+      "pricePerNight": 340,
+      "rating": 4.90,
+      "reviewCount": 145,
+      "amenities": ["wifi", "ac", "pool", "gym", "kitchen", "tv", "parking"],
+      "host": {
+        "name": "Sarah Mitchell",
+        "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop",
+        "joinedDate": "2019-01-15",
+        "responseRate": 96,
+        "isSuperhost": true
+      },
+      "maxGuests": 4,
+      "bedrooms": 2,
+      "beds": 2,
+      "bathrooms": 2,
+      "availability": [
+        { "start": "2026-02-15", "end": "2026-12-31" }
+      ],
+      "propertyType": "apartment",
+      "featured": false
+    },
+    {
+      "id": "stay-013",
+      "name": "Tuscan Farmhouse with Vineyard Views",
+      "description": "Escape to the rolling hills of Tuscany in this restored 18th-century farmhouse. Surrounded by olive groves and vineyards, the property offers authentic Italian countryside living. Rustic stone walls, terracotta floors, and a wood-burning fireplace create warm ambiance. The private pool overlooks the valley. Perfect for wine lovers and those seeking la dolce vita.",
+      "location": {
+        "city": "Florence",
+        "country": "Italy",
+        "address": "Via delle Colline 42, Chianti",
+        "coordinates": { "lat": 43.4623, "lng": 11.2558 }
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop"
+      ],
+      "pricePerNight": 425,
+      "rating": 4.95,
+      "reviewCount": 112,
+      "amenities": ["wifi", "pool", "kitchen", "parking", "fireplace", "breakfast", "pets"],
+      "host": {
+        "name": "Marco Rossi",
+        "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
+        "joinedDate": "2016-08-10",
+        "responseRate": 99,
+        "isSuperhost": true
+      },
+      "maxGuests": 8,
+      "bedrooms": 4,
+      "beds": 5,
+      "bathrooms": 3,
+      "availability": [
+        { "start": "2026-03-15", "end": "2026-11-30" }
+      ],
+      "propertyType": "house",
+      "featured": false
+    },
+    {
+      "id": "stay-014",
+      "name": "Cape Town Clifton Beach Bungalow",
+      "description": "Perched on the slopes of Lion's Head, this stylish bungalow offers breathtaking views of Clifton's pristine beaches and the Atlantic Ocean. The contemporary design maximizes the spectacular setting with expansive glass doors opening to a wraparound deck. Steps lead down to the famous Clifton beaches. Watch the sunset over the ocean from your private infinity pool.",
+      "location": {
+        "city": "Cape Town",
+        "country": "South Africa",
+        "address": "12 Nettleton Road, Clifton",
+        "coordinates": { "lat": -33.9321, "lng": 18.3775 }
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop"
+      ],
+      "pricePerNight": 550,
+      "rating": 4.94,
+      "reviewCount": 89,
+      "amenities": ["wifi", "pool", "ac", "kitchen", "tv", "parking", "beachfront"],
+      "host": {
+        "name": "David Nkosi",
+        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop",
+        "joinedDate": "2018-11-05",
+        "responseRate": 97,
+        "isSuperhost": true
+      },
+      "maxGuests": 6,
+      "bedrooms": 3,
+      "beds": 3,
+      "bathrooms": 3,
+      "availability": [
+        { "start": "2026-02-15", "end": "2026-12-31" }
+      ],
+      "propertyType": "house",
+      "featured": false
+    },
+    {
+      "id": "stay-015",
+      "name": "Montreal Old Port Loft",
+      "description": "Stay in the heart of Old Montreal in this converted warehouse loft. Soaring ceilings, exposed brick, and original timber beams create an industrial-chic atmosphere. Large factory windows flood the space with natural light. Walk to Notre-Dame Basilica, cobblestone streets, and waterfront promenades. The vibrant neighborhood offers excellent dining and nightlife options.",
+      "location": {
+        "city": "Montreal",
+        "country": "Canada",
+        "address": "355 Rue McGill, Old Montreal",
+        "coordinates": { "lat": 45.5017, "lng": -73.5673 }
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=600&fit=crop"
+      ],
+      "pricePerNight": 195,
+      "rating": 4.86,
+      "reviewCount": 198,
+      "amenities": ["wifi", "heating", "ac", "kitchen", "tv", "washer", "workspace", "gym"],
+      "host": {
+        "name": "Marie Dubois",
+        "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop",
+        "joinedDate": "2019-05-20",
+        "responseRate": 95,
+        "isSuperhost": false
+      },
+      "maxGuests": 4,
+      "bedrooms": 1,
+      "beds": 2,
+      "bathrooms": 1,
+      "availability": [
+        { "start": "2026-02-15", "end": "2026-12-31" }
+      ],
+      "propertyType": "loft",
+      "featured": false
+    }
+  ]
+}
