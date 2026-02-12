@@ -71,7 +71,7 @@ export function ImageGallery({ images, alt }: ImageGalleryProps) {
         {/* Main Image */}
         <button
           type="button"
-          className="relative col-span-2 row-span-2 overflow-hidden rounded-l-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950"
+          className="relative col-span-2 row-span-2 overflow-hidden rounded-l-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950"
           onClick={() => openLightbox(0)}
           aria-label={`View ${alt} - Image 1 of ${images.length}`}
         >
@@ -91,7 +91,7 @@ export function ImageGallery({ images, alt }: ImageGalleryProps) {
             key={index}
             type="button"
             className={cn(
-              "relative hidden overflow-hidden md:block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950",
+              "relative hidden overflow-hidden md:block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950",
               index === 1 && "rounded-tr-xl",
               index === 3 && "rounded-br-xl"
             )}
@@ -188,7 +188,7 @@ export function ImageGallery({ images, alt }: ImageGalleryProps) {
                 className={cn(
                   "relative h-12 w-12 overflow-hidden rounded-md transition-all",
                   index === currentIndex
-                    ? "ring-2 ring-amber-500"
+                    ? "ring-2 ring-violet-500"
                     : "opacity-60 hover:opacity-100"
                 )}
                 onClick={() => setCurrentIndex(index)}

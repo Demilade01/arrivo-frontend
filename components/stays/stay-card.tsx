@@ -15,7 +15,7 @@ export function StayCard({ stay, priority = false }: StayCardProps) {
     <article className="group">
       <Link
         href={`/stays/${stay.id}`}
-        className="block rounded-xl border border-neutral-800 bg-neutral-900/50 overflow-hidden transition-all hover:border-neutral-700 hover:shadow-lg hover:shadow-amber-500/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950"
+        className="block rounded-xl border border-neutral-800 bg-neutral-900/50 overflow-hidden transition-all hover:border-neutral-700 hover:shadow-lg hover:shadow-violet-500/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950"
         aria-label={`View ${stay.name} - ${formatPrice(stay.pricePerNight)} per night`}
       >
         {/* Image Container */}
@@ -49,12 +49,12 @@ export function StayCard({ stay, priority = false }: StayCardProps) {
         <div className="p-4">
           {/* Header: Title and Rating */}
           <div className="flex items-start justify-between gap-2">
-            <h3 className="font-semibold text-white line-clamp-1 group-hover:text-amber-500 transition-colors">
+            <h3 className="font-semibold text-white line-clamp-1 group-hover:text-violet-400 transition-colors">
               {truncateText(stay.name, 40)}
             </h3>
             <div className="flex items-center gap-1 shrink-0">
               <Star
-                className="h-4 w-4 fill-amber-500 text-amber-500"
+                className="h-4 w-4 fill-violet-500 text-violet-500"
                 aria-hidden="true"
               />
               <span className="text-sm font-medium text-white">

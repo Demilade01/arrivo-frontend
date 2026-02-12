@@ -18,15 +18,15 @@ export default function HomePage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "StayDiscovery",
-    url: "https://staydiscovery.com",
-    logo: "https://staydiscovery.com/logo.png",
+    name: "Arrivo",
+    url: "https://arrivo.com",
+    logo: "https://arrivo.com/logo.png",
     description:
       "Discover unique stays and experiences around the world. From cozy cabins to luxury villas, find the perfect place for your next getaway.",
     sameAs: [
-      "https://twitter.com/staydiscovery",
-      "https://facebook.com/staydiscovery",
-      "https://instagram.com/staydiscovery",
+      "https://twitter.com/arrivo",
+      "https://facebook.com/arrivo",
+      "https://instagram.com/arrivo",
     ],
   };
 

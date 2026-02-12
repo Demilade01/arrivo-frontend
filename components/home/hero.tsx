@@ -35,17 +35,17 @@ export function Hero() {
 
       {/* Gradient Overlay */}
       <div
-        className="absolute inset-0 bg-gradient-to-r from-amber-500/10 via-transparent to-amber-500/10"
+        className="absolute inset-0 bg-gradient-to-r from-violet-600/10 via-transparent to-violet-600/10"
         aria-hidden="true"
       />
 
       <Container className="relative">
         <div className="mx-auto max-w-3xl text-center">
           {/* Badge */}
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-amber-500/20 bg-amber-500/10 px-4 py-1.5 text-sm text-amber-500">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-violet-500/20 bg-violet-500/10 px-4 py-1.5 text-sm text-violet-400">
             <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-500 opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-amber-500" />
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-violet-500 opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-violet-500" />
             </span>
             Discover Your Perfect Stay
           </div>
@@ -56,7 +56,7 @@ export function Hero() {
             className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl"
           >
             Find Your Next{" "}
-            <span className="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-violet-400 to-violet-600 bg-clip-text text-transparent">
               Adventure
             </span>
           </h1>

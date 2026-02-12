@@ -68,7 +68,7 @@ export function PopularLocations() {
             <Link
               key={location.city}
               href={`/stays?location=${encodeURIComponent(location.city)}`}
-              className="group relative aspect-[3/4] overflow-hidden rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950"
+              className="group relative aspect-[3/4] overflow-hidden rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950"
             >
               {/* Image */}
               <Image
@@ -87,11 +87,11 @@ export function PopularLocations() {
 
               {/* Content */}
               <div className="absolute bottom-0 left-0 right-0 p-4">
-                <div className="flex items-center gap-1 text-amber-500">
+                <div className="flex items-center gap-1 text-violet-400">
                   <MapPin className="h-3.5 w-3.5" aria-hidden="true" />
                   <span className="text-xs">{location.country}</span>
                 </div>
-                <h3 className="mt-1 font-semibold text-white group-hover:text-amber-500 transition-colors">
+                <h3 className="mt-1 font-semibold text-white group-hover:text-violet-400 transition-colors">
                   {location.city}
                 </h3>
                 <p className="mt-0.5 text-xs text-neutral-400">

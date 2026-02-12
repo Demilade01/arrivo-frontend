@@ -11,10 +11,10 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <button
         className={cn(
-          "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 disabled:pointer-events-none disabled:opacity-50",
+          "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 disabled:pointer-events-none disabled:opacity-50",
           {
             // Variants
-            "bg-amber-500 text-neutral-950 hover:bg-amber-400":
+            "bg-violet-600 text-white hover:bg-violet-500":
               variant === "default",
             "bg-neutral-800 text-neutral-100 hover:bg-neutral-700":
               variant === "secondary",
@@ -22,7 +22,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
               variant === "outline",
             "text-neutral-100 hover:bg-neutral-800 hover:text-neutral-50":
               variant === "ghost",
-            "text-amber-500 underline-offset-4 hover:underline":
+            "text-violet-500 underline-offset-4 hover:underline":
               variant === "link",
             // Sizes
             "h-10 px-4 py-2 text-sm": size === "default",

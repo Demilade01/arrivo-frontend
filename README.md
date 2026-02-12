@@ -1,4 +1,4 @@
-# StayDiscovery - Arrivo Frontend Assessment
+# Arrivo - Frontend Assessment
 
 A production-quality Stay Discovery mini application built with Next.js 16, demonstrating UI accuracy, SEO discipline, performance optimization, and clean frontend architecture.
 

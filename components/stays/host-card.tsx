@@ -24,10 +24,10 @@ export function HostCard({ host }: HostCardProps) {
           />
           {host.isSuperhost && (
             <div
-              className="absolute -bottom-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full bg-amber-500"
+              className="absolute -bottom-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full bg-violet-600"
               aria-label="Superhost"
             >
-              <Shield className="h-3.5 w-3.5 text-neutral-950" aria-hidden="true" />
+              <Shield className="h-3.5 w-3.5 text-white" aria-hidden="true" />
             </div>
           )}
         </div>
@@ -69,7 +69,7 @@ export function HostCard({ host }: HostCardProps) {
       {/* Safety Notice */}
       <p className="mt-4 text-xs text-neutral-500">
         To protect your payment, never transfer money or communicate outside of
-        the StayDiscovery website or app.
+        the Arrivo website or app.
       </p>
     </div>
   );

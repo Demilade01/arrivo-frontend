@@ -212,9 +212,9 @@ function Pagination({
             <a
               key={pageNum}
               href={createPageUrl(pageNum)}
-              className={`flex h-10 w-10 items-center justify-center rounded-lg text-sm font-medium transition-colors ${
+                className={`flex h-10 w-10 items-center justify-center rounded-lg text-sm font-medium transition-colors ${
                 pageNum === currentPage
-                  ? "bg-amber-500 text-neutral-950"
+                  ? "bg-violet-600 text-white"
                   : "border border-neutral-700 bg-neutral-800 text-white hover:bg-neutral-700"
               }`}
               aria-current={pageNum === currentPage ? "page" : undefined}

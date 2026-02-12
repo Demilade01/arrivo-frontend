@@ -24,8 +24,8 @@ export function Footer() {
               href="/"
               className="flex items-center gap-2 text-xl font-bold text-white"
             >
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-amber-500">
-                <span className="text-sm font-bold text-neutral-950">S</span>
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-violet-600">
+                <span className="text-sm font-bold text-white">A</span>
               </div>
               {APP_NAME}
             </Link>
@@ -43,7 +43,7 @@ export function Footer() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-neutral-400 transition-colors hover:text-amber-500"
+                    className="text-neutral-400 transition-colors hover:text-violet-400"
                     aria-label={social.label}
                   >
                     <Icon className="h-5 w-5" aria-hidden="true" />

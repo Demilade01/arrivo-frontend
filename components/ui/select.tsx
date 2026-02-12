@@ -15,7 +15,7 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(
         <select
           className={cn(
             "flex h-10 w-full appearance-none rounded-lg border bg-neutral-900 px-3 py-2 pr-10 text-sm text-neutral-100 transition-colors",
-            "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950",
+            "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950",
             "disabled:cursor-not-allowed disabled:opacity-50",
             error
               ? "border-red-500 focus-visible:ring-red-500"

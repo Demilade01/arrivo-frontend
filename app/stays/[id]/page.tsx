@@ -187,7 +187,7 @@ export default async function StayDetailPage({ params }: StayDetailPageProps) {
                   {/* Rating */}
                   <div className="flex items-center gap-1">
                     <Star
-                      className="h-5 w-5 fill-amber-500 text-amber-500"
+                      className="h-5 w-5 fill-violet-500 text-violet-500"
                       aria-hidden="true"
                     />
                     <span className="font-medium text-white">
@@ -303,7 +303,7 @@ export default async function StayDetailPage({ params }: StayDetailPageProps) {
                     </div>
                     <div className="flex items-center gap-1">
                       <Star
-                        className="h-4 w-4 fill-amber-500 text-amber-500"
+                        className="h-4 w-4 fill-violet-500 text-violet-500"
                         aria-hidden="true"
                       />
                       <span className="font-medium text-white">

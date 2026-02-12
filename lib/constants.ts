@@ -1,12 +1,12 @@
 // App Constants
-export const APP_NAME = "StayDiscovery";
+export const APP_NAME = "Arrivo";
 export const APP_DESCRIPTION =
   "Discover unique stays and experiences around the world";
 export const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
 
 // SEO Constants
 export const DEFAULT_OG_IMAGE = "/og-image.jpg";
-export const TWITTER_HANDLE = "@staydiscovery";
+export const TWITTER_HANDLE = "@arrivo";
 
 // Pagination
 export const DEFAULT_PAGE_SIZE = 12;

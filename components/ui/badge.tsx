@@ -15,7 +15,7 @@ function Badge({
       className={cn(
         "inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium transition-colors",
         {
-          "bg-amber-500/10 text-amber-500 border border-amber-500/20":
+          "bg-violet-500/10 text-violet-400 border border-violet-500/20":
             variant === "default",
           "bg-neutral-800 text-neutral-300 border border-neutral-700":
             variant === "secondary",
