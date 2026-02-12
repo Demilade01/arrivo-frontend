@@ -4,7 +4,7 @@ A production-quality Stay Discovery mini application built with Next.js 16, demo
 
 ## Live Demo
 
-[View Live Demo](#https://arrivo-frontend-three.vercel.app/)
+[View Live Demo](https://arrivo-frontend-three.vercel.app/)
 
 ## Features
 
