@@ -2,6 +2,7 @@ import { Hero } from "@/components/home/hero";
 import { FeaturedStays } from "@/components/home/featured-stays";
 import { PopularLocations } from "@/components/home/popular-locations";
 import { Testimonials } from "@/components/home/testimonials";
+import { Faqs } from "@/components/home/faqs";
 import staysData from "@/data/stays.json";
 import type { Stay } from "@/lib/types";
 
@@ -50,6 +51,9 @@ export default function HomePage() {
 
       {/* Testimonials Section */}
       <Testimonials />
+
+      {/* FAQs Section */}
+      <Faqs />
     </>
   );
 }
