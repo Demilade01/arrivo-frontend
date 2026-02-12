@@ -30,8 +30,18 @@ export function DateRangePicker({
   const selected: DateRange | undefined = React.useMemo(() => {
     if (!value?.from && !value?.to) return undefined;
     return {
-      from: value.from ? new Date(value.from) : undefined,
-      to: value.to ? new Date(value.to) : undefined,
+      from: value.from
+        ? (() => {
+            const [year, month, day] = value.from.split("-").map(Number);
+            return new Date(year, month - 1, day);
+          })()
+        : undefined,
+      to: value.to
+        ? (() => {
+            const [year, month, day] = value.to.split("-").map(Number);
+            return new Date(year, month - 1, day);
+          })()
+        : undefined,
     };
   }, [value]);
 
@@ -41,12 +51,9 @@ export function DateRangePicker({
       return;
     }
 
-    const from = range.from
-      ? range.from.toISOString().slice(0, 10)
-      : undefined;
-    const to = range.to
-      ? range.to.toISOString().slice(0, 10)
-      : from;
+    // Use local dates (not UTC) to avoid off-by-one issues in timezones
+    const from = range.from ? format(range.from, "yyyy-MM-dd") : undefined;
+    const to = range.to ? format(range.to, "yyyy-MM-dd") : from;
 
     onChange?.({ from, to });
   };
