@@ -13,6 +13,7 @@ import {
   MAX_PRICE,
   PRICE_STEP,
 } from "@/lib/constants";
+import { DateRangePicker } from "@/components/stays/date-range-picker";
 
 export function SearchFilters() {
   const router = useRouter();
@@ -88,16 +89,6 @@ export function SearchFilters() {
       updates[key] = value.toString();
     });
 
-    // Normalize date range: ensure check-out is not before check-in
-    if (updates.checkIn && updates.checkOut) {
-      const inDate = new Date(updates.checkIn);
-      const outDate = new Date(updates.checkOut);
-      if (outDate < inDate) {
-        // If user picked an invalid range, align check-out with check-in
-        updates.checkOut = updates.checkIn;
-      }
-    }
-
     updateFilters(updates);
   };
 
@@ -125,45 +116,27 @@ export function SearchFilters() {
           />
         </div>
 
+        {/* Date range (shadcn-style picker) */}
+        <div className="sm:max-w-sm lg:max-w-md">
+          <label className="mb-1.5 block text-sm font-medium text-neutral-300">
+            Dates
+          </label>
+          <DateRangePicker
+            value={{
+              from: checkIn || undefined,
+              to: checkOut || undefined,
+            }}
+            onChange={(next) => {
+              const updates: Record<string, string> = {};
+              updates.checkIn = next.from ?? "";
+              updates.checkOut = next.to ?? "";
+              updateFilters(updates);
+            }}
+          />
+        </div>
+
         {/* Filter Row */}
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
-          {/* Check-in */}
-          <div>
-            <label
-              htmlFor="checkIn"
-              className="mb-1.5 block text-sm font-medium text-neutral-300"
-            >
-              Check-in
-            </label>
-            <Input
-              type="date"
-              id="checkIn"
-              name="checkIn"
-              defaultValue={checkIn}
-              className="date-input"
-              aria-label="Check-in date"
-            />
-          </div>
-
-          {/* Check-out */}
-          <div>
-            <label
-              htmlFor="checkOut"
-              className="mb-1.5 block text-sm font-medium text-neutral-300"
-            >
-              Check-out
-            </label>
-            <Input
-              type="date"
-              id="checkOut"
-              name="checkOut"
-              defaultValue={checkOut}
-              className="date-input"
-              min={checkIn || undefined}
-              aria-label="Check-out date"
-            />
-          </div>
-
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {/* Guests */}
           <div>
             <label

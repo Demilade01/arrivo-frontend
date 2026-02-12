@@ -27,7 +27,7 @@ export function Header() {
         <div className="border-b border-neutral-800 bg-neutral-950/95">
           <Container>
             <div className="flex items-center justify-between gap-3 py-2 text-xs text-neutral-300">
-              <p className="flex-1 text-center md:text-left">
+              <p className=" text-center md:text-left">
                 <span className="mr-1">✨</span>
                 Discover your dream stay with Arrivo.{" "}
                 <button
