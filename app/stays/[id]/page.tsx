@@ -89,43 +89,77 @@ export default async function StayDetailPage({ params }: StayDetailPageProps) {
     notFound();
   }
 
-  // JSON-LD structured data for the listing
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LodgingBusiness",
-    name: stay.name,
-    description: stay.description,
-    image: stay.images,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: stay.location.address,
-      addressLocality: stay.location.city,
-      addressCountry: stay.location.country,
+  // JSON-LD structured data for the listing and breadcrumbs
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "LodgingBusiness",
+      name: stay.name,
+      description: stay.description,
+      image: stay.images,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: stay.location.address,
+        addressLocality: stay.location.city,
+        addressCountry: stay.location.country,
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: stay.location.coordinates.lat,
+        longitude: stay.location.coordinates.lng,
+      },
+      priceRange: `$${stay.pricePerNight}/night`,
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: stay.rating,
+        reviewCount: stay.reviewCount,
+        bestRating: 5,
+        worstRating: 1,
+      },
+      amenityFeature: stay.amenities.map((amenity) => ({
+        "@type": "LocationFeatureSpecification",
+        name: amenity,
+        value: true,
+      })),
+      numberOfRooms: stay.bedrooms,
+      occupancy: {
+        "@type": "QuantitativeValue",
+        maxValue: stay.maxGuests,
+      },
     },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: stay.location.coordinates.lat,
-      longitude: stay.location.coordinates.lng,
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: `${APP_URL}/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Stays",
+          item: `${APP_URL}/stays`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: stay.location.city,
+          item: `${APP_URL}/stays?location=${encodeURIComponent(
+            stay.location.city
+          )}`,
+        },
+        {
+          "@type": "ListItem",
+          position: 4,
+          name: stay.name,
+          item: `${APP_URL}/stays/${stay.id}`,
+        },
+      ],
     },
-    priceRange: `$${stay.pricePerNight}/night`,
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: stay.rating,
-      reviewCount: stay.reviewCount,
-      bestRating: 5,
-      worstRating: 1,
-    },
-    amenityFeature: stay.amenities.map((amenity) => ({
-      "@type": "LocationFeatureSpecification",
-      name: amenity,
-      value: true,
-    })),
-    numberOfRooms: stay.bedrooms,
-    occupancy: {
-      "@type": "QuantitativeValue",
-      maxValue: stay.maxGuests,
-    },
-  };
+  ];
 
   return (
     <>

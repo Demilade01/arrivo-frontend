@@ -9,6 +9,8 @@ export async function GET(request: NextRequest) {
 
     // Parse query parameters
     const location = searchParams.get("location")?.toLowerCase();
+    const checkIn = searchParams.get("checkIn");
+    const checkOut = searchParams.get("checkOut");
     const minPrice = searchParams.get("minPrice")
       ? parseInt(searchParams.get("minPrice")!)
       : undefined;
@@ -19,7 +21,11 @@ export async function GET(request: NextRequest) {
       ? parseInt(searchParams.get("guests")!)
       : undefined;
     const propertyType = searchParams.get("propertyType")?.toLowerCase();
-    const amenities = searchParams.getAll("amenities");
+    const amenitiesParam = searchParams.get("amenities") || "";
+    const amenities = amenitiesParam
+      .split(",")
+      .map((a) => a.trim().toLowerCase())
+      .filter(Boolean);
     const featured = searchParams.get("featured") === "true";
     const page = Math.max(1, parseInt(searchParams.get("page") || "1"));
     const pageSize = Math.min(
@@ -36,6 +42,30 @@ export async function GET(request: NextRequest) {
         (stay) =>
           stay.location.city.toLowerCase().includes(location) ||
           stay.location.country.toLowerCase().includes(location)
+      );
+    }
+
+    // Filter by date availability
+    if (checkIn || checkOut) {
+      const checkInDate = checkIn ? new Date(checkIn) : undefined;
+      const checkOutDate = checkOut ? new Date(checkOut) : undefined;
+
+      filteredStays = filteredStays.filter((stay) =>
+        stay.availability.some((range) => {
+          const start = new Date(range.start);
+          const end = new Date(range.end);
+
+          if (checkInDate && checkOutDate) {
+            return start <= checkInDate && end >= checkOutDate;
+          }
+          if (checkInDate) {
+            return end >= checkInDate;
+          }
+          if (checkOutDate) {
+            return start <= checkOutDate;
+          }
+          return true;
+        })
       );
     }
 

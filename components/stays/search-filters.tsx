@@ -6,7 +6,13 @@ import { Search, SlidersHorizontal, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select } from "@/components/ui/select";
-import { PROPERTY_TYPES } from "@/lib/constants";
+import {
+  PROPERTY_TYPES,
+  AMENITIES,
+  MIN_PRICE,
+  MAX_PRICE,
+  PRICE_STEP,
+} from "@/lib/constants";
 
 export function SearchFilters() {
   const router = useRouter();
@@ -17,9 +23,23 @@ export function SearchFilters() {
   const minPrice = searchParams.get("minPrice") || "";
   const maxPrice = searchParams.get("maxPrice") || "";
   const propertyType = searchParams.get("propertyType") || "";
+  const checkIn = searchParams.get("checkIn") || "";
+  const checkOut = searchParams.get("checkOut") || "";
+  const amenitiesParam = searchParams.get("amenities") || "";
+  const selectedAmenities = amenitiesParam
+    .split(",")
+    .map((a) => a.trim())
+    .filter(Boolean);
 
   const hasActiveFilters =
-    location || guests || minPrice || maxPrice || propertyType;
+    location ||
+    guests ||
+    minPrice ||
+    maxPrice ||
+    propertyType ||
+    checkIn ||
+    checkOut ||
+    amenitiesParam;
 
   const updateFilters = useCallback(
     (updates: Record<string, string>) => {
@@ -44,6 +64,20 @@ export function SearchFilters() {
   const clearFilters = useCallback(() => {
     router.push("/stays");
   }, [router]);
+
+  const toggleAmenity = useCallback(
+    (amenityId: string) => {
+      const set = new Set(selectedAmenities);
+      if (set.has(amenityId)) {
+        set.delete(amenityId);
+      } else {
+        set.add(amenityId);
+      }
+      const value = Array.from(set).join(",");
+      updateFilters({ amenities: value });
+    },
+    [selectedAmenities, updateFilters]
+  );
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -82,7 +116,41 @@ export function SearchFilters() {
         </div>
 
         {/* Filter Row */}
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
+          {/* Check-in */}
+          <div>
+            <label
+              htmlFor="checkIn"
+              className="mb-1.5 block text-sm font-medium text-neutral-300"
+            >
+              Check-in
+            </label>
+            <Input
+              type="date"
+              id="checkIn"
+              name="checkIn"
+              defaultValue={checkIn}
+              aria-label="Check-in date"
+            />
+          </div>
+
+          {/* Check-out */}
+          <div>
+            <label
+              htmlFor="checkOut"
+              className="mb-1.5 block text-sm font-medium text-neutral-300"
+            >
+              Check-out
+            </label>
+            <Input
+              type="date"
+              id="checkOut"
+              name="checkOut"
+              defaultValue={checkOut}
+              aria-label="Check-out date"
+            />
+          </div>
+
           {/* Guests */}
           <div>
             <label
@@ -106,42 +174,42 @@ export function SearchFilters() {
             </Select>
           </div>
 
-          {/* Min Price */}
+          {/* Price Range */}
           <div>
             <label
               htmlFor="minPrice"
               className="mb-1.5 block text-sm font-medium text-neutral-300"
             >
-              Min Price
+              Price Range (per night)
             </label>
-            <Input
-              type="number"
-              id="minPrice"
-              name="minPrice"
-              placeholder="$0"
-              min={0}
-              defaultValue={minPrice}
-              aria-label="Minimum price per night"
-            />
-          </div>
-
-          {/* Max Price */}
-          <div>
-            <label
-              htmlFor="maxPrice"
-              className="mb-1.5 block text-sm font-medium text-neutral-300"
-            >
-              Max Price
-            </label>
-            <Input
-              type="number"
-              id="maxPrice"
-              name="maxPrice"
-              placeholder="$10,000"
-              min={0}
-              defaultValue={maxPrice}
-              aria-label="Maximum price per night"
-            />
+            <div className="space-y-2">
+              <div className="flex items-center gap-3">
+                <Input
+                  type="number"
+                  id="minPrice"
+                  name="minPrice"
+                  placeholder={`₦${MIN_PRICE.toLocaleString()}`}
+                  min={MIN_PRICE}
+                  max={MAX_PRICE}
+                  defaultValue={minPrice}
+                  aria-label="Minimum price per night"
+                  className="h-9 text-xs"
+                />
+                <span className="text-xs text-neutral-500">to</span>
+                <Input
+                  type="number"
+                  id="maxPrice"
+                  name="maxPrice"
+                  placeholder={`₦${MAX_PRICE.toLocaleString()}`}
+                  min={MIN_PRICE}
+                  max={MAX_PRICE}
+                  step={PRICE_STEP}
+                  defaultValue={maxPrice}
+                  aria-label="Maximum price per night"
+                  className="h-9 text-xs"
+                />
+              </div>
+            </div>
           </div>
 
           {/* Property Type */}
@@ -166,6 +234,31 @@ export function SearchFilters() {
               ))}
             </Select>
           </div>
+        </div>
+
+        {/* Amenities row */}
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="text-sm font-medium text-neutral-300">
+            Popular amenities:
+          </span>
+          {AMENITIES.slice(0, 6).map((amenity) => {
+            const isActive = selectedAmenities.includes(amenity.id);
+            return (
+              <button
+                key={amenity.id}
+                type="button"
+                onClick={() => toggleAmenity(amenity.id)}
+                className={`inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium transition-colors ${
+                  isActive
+                    ? "border-violet-500 bg-violet-500/10 text-violet-300"
+                    : "border-neutral-700 bg-neutral-900 text-neutral-300 hover:border-neutral-500"
+                }`}
+                aria-pressed={isActive}
+              >
+                {amenity.label}
+              </button>
+            );
+          })}
         </div>
 
         {/* Action Buttons */}
