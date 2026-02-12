@@ -5,40 +5,46 @@ import { Container } from "@/components/layout/container";
 
 const locations = [
   {
-    city: "New York",
-    country: "USA",
-    image: "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=600&h=400&fit=crop",
+    city: "Lagos",
+    country: "Nigeria",
+    image:
+      "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=600&h=400&fit=crop",
     stays: 1240,
   },
   {
-    city: "Paris",
-    country: "France",
-    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&h=400&fit=crop",
+    city: "Abuja",
+    country: "Nigeria",
+    image:
+      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&h=400&fit=crop",
     stays: 890,
   },
   {
-    city: "Tokyo",
-    country: "Japan",
-    image: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&h=400&fit=crop",
+    city: "Port Harcourt",
+    country: "Nigeria",
+    image:
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&h=400&fit=crop",
     stays: 756,
   },
   {
-    city: "London",
-    country: "UK",
-    image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&h=400&fit=crop",
-    stays: 1120,
+    city: "Ibadan",
+    country: "Nigeria",
+    image:
+      "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&h=400&fit=crop",
+    stays: 640,
   },
   {
-    city: "Dubai",
-    country: "UAE",
-    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&h=400&fit=crop",
-    stays: 645,
-  },
-  {
-    city: "Bali",
-    country: "Indonesia",
-    image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&h=400&fit=crop",
+    city: "Enugu",
+    country: "Nigeria",
+    image:
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&h=400&fit=crop",
     stays: 520,
+  },
+  {
+    city: "Kano",
+    country: "Nigeria",
+    image:
+      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&h=400&fit=crop",
+    stays: 430,
   },
 ];
 
@@ -55,10 +61,10 @@ export function PopularLocations() {
             id="popular-locations-heading"
             className="text-2xl font-bold text-white md:text-3xl"
           >
-            Popular Destinations
+            Popular Places in Nigeria
           </h2>
           <p className="mt-2 text-neutral-400">
-            Explore trending locations around the world
+            Explore trending cities across Nigeria
           </p>
         </div>
 

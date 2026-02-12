@@ -11,3 +11,4 @@ export {
 } from "./card";
 export { Skeleton, StayCardSkeleton, StayDetailSkeleton } from "./skeleton";
 export { Select, type SelectProps } from "./select";
+export { Spinner } from "./spinner";

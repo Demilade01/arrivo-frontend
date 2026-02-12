@@ -22,23 +22,22 @@ export function Header() {
       </a>
 
       <Container>
-        <nav
-          className="flex h-16 items-center justify-between"
-          aria-label="Main navigation"
-        >
-          {/* Logo */}
-          <Link
-            href="/"
-            className="flex items-center gap-2 text-xl font-bold text-white transition-colors hover:text-violet-400"
-          >
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-violet-600">
-              <span className="text-sm font-bold text-white">A</span>
-            </div>
-            <span className="hidden sm:inline">{APP_NAME}</span>
-          </Link>
+        <nav className="flex h-16 items-center" aria-label="Main navigation">
+          {/* Left: Logo */}
+          <div className="flex flex-1 items-center">
+            <Link
+              href="/"
+              className="flex items-center gap-2 text-xl font-bold text-white transition-colors hover:text-violet-400"
+            >
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-violet-600">
+                <span className="text-sm font-bold text-white">A</span>
+              </div>
+              <span className="hidden sm:inline">{APP_NAME}</span>
+            </Link>
+          </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex md:items-center md:gap-6">
+          {/* Center: Desktop Navigation */}
+          <div className="hidden flex-1 items-center justify-center gap-6 md:flex">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
@@ -50,8 +49,8 @@ export function Header() {
             ))}
           </div>
 
-          {/* Desktop Actions */}
-          <div className="hidden md:flex md:items-center md:gap-4">
+          {/* Right: Desktop Actions */}
+          <div className="hidden flex-1 items-center justify-end gap-4 md:flex">
             <Link href="/stays">
               <Button variant="ghost" size="icon" aria-label="Search stays">
                 <Search className="h-5 w-5" />
@@ -84,8 +83,10 @@ export function Header() {
         <div
           id="mobile-menu"
           className={cn(
-            "md:hidden",
-            isMobileMenuOpen ? "block" : "hidden"
+            "md:hidden overflow-hidden border-t border-neutral-800 bg-neutral-950/95 backdrop-blur-lg transition-all duration-300 ease-out",
+            isMobileMenuOpen
+              ? "pointer-events-auto max-h-96 opacity-100 translate-y-0"
+              : "pointer-events-none max-h-0 opacity-0 -translate-y-2"
           )}
         >
           <div className="space-y-1 pb-4 pt-2">
@@ -93,7 +94,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="block rounded-lg px-3 py-2 text-base font-medium text-neutral-300 hover:bg-neutral-800 hover:text-white"
+                className="block rounded-lg px-3 py-2 text-base font-medium text-neutral-300 transition-colors hover:bg-neutral-800 hover:text-white"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}
