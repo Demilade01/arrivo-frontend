@@ -114,7 +114,7 @@ export function Hero() {
             {/* Search Form */}
             <form
               onSubmit={handleSearch}
-              className="mt-8 rounded-2xl border border-neutral-800 bg-neutral-900/80 p-4 backdrop-blur-sm md:p-5"
+              className="mt-8 rounded-full border border-neutral-800 bg-neutral-900/80 p-4 backdrop-blur-sm md:p-5"
               role="search"
               aria-label="Search for stays"
             >
@@ -133,7 +133,7 @@ export function Hero() {
                     name="location"
                     type="text"
                     placeholder="Where are you going?"
-                    className="h-11 pl-10 text-sm md:h-12 md:text-base"
+                    className="h-11 rounded-full pl-10 text-sm md:h-12 md:text-base"
                   />
                 </div>
 
@@ -153,7 +153,7 @@ export function Hero() {
                     min={1}
                     max={16}
                     placeholder="Guests"
-                    className="h-11 pl-10 text-sm md:h-12 md:text-base"
+                    className="h-11 pl-10 text-sm md:h-12 md:text-base rounded-full"
                   />
                 </div>
 
@@ -161,7 +161,7 @@ export function Hero() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="h-11 w-full text-sm md:h-12 md:text-base"
+                  className="h-11 w-full rounded-full text-sm md:h-12 md:text-base"
                 >
                   <Search className="mr-2 h-4 w-4 md:h-5 md:w-5" aria-hidden="true" />
                   Search Stays

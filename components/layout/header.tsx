@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showAnnouncement, setShowAnnouncement] = useState(true);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-neutral-800 bg-neutral-950/80 backdrop-blur-lg">
@@ -20,6 +21,34 @@ export function Header() {
       >
         Skip to main content
       </a>
+
+      {/* Top announcement bar */}
+      {showAnnouncement && (
+        <div className="border-b border-neutral-800 bg-neutral-950/95">
+          <Container>
+            <div className="flex items-center justify-between gap-3 py-2 text-xs text-neutral-300">
+              <p className="flex-1 text-center md:text-left">
+                <span className="mr-1">✨</span>
+                Discover your dream stay with Arrivo.{" "}
+                <button
+                  type="button"
+                  className="inline-flex items-center text-xs font-medium text-violet-400 underline-offset-4 hover:underline"
+                >
+                  Learn more
+                </button>
+              </p>
+              <button
+                type="button"
+                className="inline-flex h-6 w-6 items-center justify-center rounded-full text-neutral-500 transition-colors hover:bg-neutral-800 hover:text-neutral-200"
+                onClick={() => setShowAnnouncement(false)}
+                aria-label="Dismiss announcement"
+              >
+                <X className="h-3.5 w-3.5" aria-hidden="true" />
+              </button>
+            </div>
+          </Container>
+        </div>
+      )}
 
       <Container>
         <nav className="flex h-16 items-center" aria-label="Main navigation">

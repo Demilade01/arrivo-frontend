@@ -3,6 +3,7 @@ import { FeaturedStays } from "@/components/home/featured-stays";
 import { PopularLocations } from "@/components/home/popular-locations";
 import { Testimonials } from "@/components/home/testimonials";
 import { Faqs } from "@/components/home/faqs";
+import { CallToAction } from "@/components/home/call-to-action";
 import staysData from "@/data/stays.json";
 import type { Stay } from "@/lib/types";
 
@@ -54,6 +55,9 @@ export default function HomePage() {
 
       {/* FAQs Section */}
       <Faqs />
+
+      {/* Final CTA Section */}
+      <CallToAction />
     </>
   );
 }
