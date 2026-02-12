@@ -55,9 +55,13 @@ async function getStays(searchParams: {
   if (searchParams.page) params.set("page", searchParams.page);
   params.set("pageSize", String(DEFAULT_PAGE_SIZE));
 
-  // In production, use absolute URL. For dev, use relative URL with fetch
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
-  const res = await fetch(`${baseUrl}/api/stays?${params.toString()}`, {
+  // Use absolute URL when NEXT_PUBLIC_APP_URL is set, otherwise fall back to relative
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL;
+  const url = baseUrl
+    ? `${baseUrl}/api/stays?${params.toString()}`
+    : `/api/stays?${params.toString()}`;
+
+  const res = await fetch(url, {
     cache: "no-store",
   });
 

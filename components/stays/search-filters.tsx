@@ -88,6 +88,16 @@ export function SearchFilters() {
       updates[key] = value.toString();
     });
 
+    // Normalize date range: ensure check-out is not before check-in
+    if (updates.checkIn && updates.checkOut) {
+      const inDate = new Date(updates.checkIn);
+      const outDate = new Date(updates.checkOut);
+      if (outDate < inDate) {
+        // If user picked an invalid range, align check-out with check-in
+        updates.checkOut = updates.checkIn;
+      }
+    }
+
     updateFilters(updates);
   };
 
@@ -130,6 +140,7 @@ export function SearchFilters() {
               id="checkIn"
               name="checkIn"
               defaultValue={checkIn}
+              className="date-input"
               aria-label="Check-in date"
             />
           </div>
@@ -147,6 +158,8 @@ export function SearchFilters() {
               id="checkOut"
               name="checkOut"
               defaultValue={checkOut}
+              className="date-input"
+              min={checkIn || undefined}
               aria-label="Check-out date"
             />
           </div>
